@@ -3,13 +3,13 @@
 
 ## Introduction
 
-The `rqr1.py` script is a Python tool that generates a customizable QR code encoding a vCard (version 3.0) with user-provided contact information. It allows users to create professional QR codes with styled dot patterns (rounded, circular, or square gradient) and output options (image, ASCII art, or both). The script is interactive, prompting users for contact details and QR code preferences, and includes robust error handling and input validation.
+The `rqr.py` script is a Python tool that generates a customizable QR code encoding a vCard (version 3.0) with user-provided contact information. It allows users to create professional QR codes with styled dot patterns (rounded, circular, or square gradient) and output options (image, ASCII art, or both). The script is interactive, prompting users for contact details and QR code preferences, and includes robust error handling and input validation.
 
 ### Features
 
 - **Customizable vCard**: Include contact details such as full name (required), last name, first name, organization, job title, phone number, email, and a note. Optional fields are excluded if left blank.
 - **Required Field**: Full name is mandatory to ensure a valid vCard.
-- **Optional Fields**: The following fields are included only if provided: last name, first name, organization, title, phone, email, and note. Invalid phone or email inputs are excluded.
+- **Optional Fields**: The following fields are included only if provided: last name, first name, organization, title, phone number, email address, and note. Invalid phone or email inputs are excluded.
 - **Styled QR Codes**: Choose from three dot styles: `rounded`, `circle`, or `square_gradient`, with ASCII previews.
 - **Output Options**: Save as a PNG image (`artistic_qr_code.png`), ASCII art (`artistic_qr_code.txt`), or both.
 - **Image Enhancements**: QR code images have rounded corners and are resized to the user-specified size.
@@ -35,14 +35,14 @@ The `rqr1.py` script is a Python tool that generates a customizable QR code enco
    pip install qrcode pillow
    ```
 
-3. **Download the Script**: Save the `rqr1.py` script to your working directory.
+3. **Download the Script**: Save the `rqr.py` script to your working directory.
 
 ---
 
 ### Running the Script
 
 #### 1. Open a Terminal or Command Prompt  
-Navigate to the directory containing `rqr1.py`.
+Navigate to the directory containing `rqr.py`.
 
 #### 2. Execute the Script
 ```bash
@@ -59,7 +59,7 @@ python rqr1.py
   Enter a name (e.g., `John Doe`). You must provide a value, or the script will prompt again.
 
 - **Optional Fields**:  
-  Enter values for last name, first name, organization, job title, phone number (e.g., `+1234567890`), email (e.g., `john@example.com`), and note (e.g., `Meeting at 5 PM`).  
+  Enter values for last name, first name, organization, job title, phone number ( `+1234567890`), email (`john@example.com`), and note ( `Meeting at 5 PM`).  
   Press Enter to skip any optional field, and it will be excluded from the vCard.
 
 - **Validation**:  
@@ -72,7 +72,7 @@ python rqr1.py
 ### QR Code Customization
 
 - **Size**:  
-  Enter the QR code size in pixels (e.g., `400`).  
+  Enter the QR code size in pixels (`400`).  
   Non-numeric or negative values default to `400`.
 
 - **Output Type**:  
